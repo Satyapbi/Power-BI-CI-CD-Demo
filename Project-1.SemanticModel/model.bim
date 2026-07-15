@@ -9,6 +9,10 @@
       {
         "name": "PBI_ProTooling",
         "value": "[\"DevMode\"]"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Goals Scored Rank\"]"
       }
     ],
     "culture": "en-US",
@@ -22,6 +26,77 @@
       "returnErrorValuesAsNull": true
     },
     "defaultPowerBIDataSourceVersion": "powerBI_V3",
-    "sourceQueryCulture": "en-IN"
+    "sourceQueryCulture": "en-IN",
+    "tables": [
+      {
+        "name": "Goals Scored Rank",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Rank",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "755d9e16-64a1-4a52-95cc-3a19d862f23d",
+            "sourceColumn": "Rank",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "National team",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4cd7014d-5470-4a36-82dd-8e22fee4ee97",
+            "sourceColumn": "National team",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Goals scored",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "02796f1a-800c-4419-921f-2239466ccc79",
+            "sourceColumn": "Goals scored",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "f87fe117-6042-4cf1-8b6b-6f6e6931ebee",
+        "partitions": [
+          {
+            "name": "Goals Scored Rank",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"Jc49DsIwDIbhu2Tu0KT/I0j8LSyIKepgQRQqtRYy7QCn4SycjPjrljxvFNt7Y01mft+t0GcY09GVjekzbxz4EGQifsMLeAHfSAw8D0zpZusOpUTZC/EtKFcOXIFPM436jXUttIZenjQw1EIb6I7jSHxXt+syLfwc5kcQTS9t+do6tKsscSGd0K1jbQ4/LhxJ1Nv0vP8D\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Rank = _t, #\"National team\" = _t, #\"Goals scored\" = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Rank\", Int64.Type}, {\"National team\", type text}, {\"Goals scored\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
   }
 }
