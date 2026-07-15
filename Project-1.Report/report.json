@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.73\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU05\",\"version\":{\"visual\":\"2.9.0\",\"report\":\"3.3.0\",\"page\":\"2.3.1\"},\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "config": "{\"version\":\"5.73\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY26SU05\",\"version\":{\"visual\":\"2.9.0\",\"report\":\"3.3.0\",\"page\":\"2.3.1\"},\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -25,7 +25,26 @@
       "filters": "[]",
       "height": 720.00,
       "name": "3f6c6169ed256668d965",
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"6452f2c1bc88f660b6f3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":215.3573687539532,\"y\":184.5920303605313,\"z\":0,\"width\":793.4218848829855,\"height\":280.12650221378874,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Goals Scored Rank.National team\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Goals Scored Rank.Goals scored)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"g\",\"Entity\":\"Goals Scored Rank\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"National team\"},\"Name\":\"Goals Scored Rank.National team\",\"NativeReferenceName\":\"National team\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Goals scored\"}},\"Function\":0},\"Name\":\"Sum(Goals Scored Rank.Goals scored)\",\"NativeReferenceName\":\"Sum of Goals scored\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"g\"}},\"Property\":\"Goals scored\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Goals scored by National team'\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 280.13,
+          "width": 793.42,
+          "x": 215.36,
+          "y": 184.59,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"73a2ed71d6a6d55e6181\",\"layouts\":[{\"id\":0,\"position\":{\"x\":56.6729917773561,\"y\":35.62302340290955,\"z\":1,\"width\":336.79949399114486,\"height\":85.81910183428211,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Report\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Arial Black\",\"fontSize\":\"24pt\",\"color\":\"#000000\"}}]}]}}]}}}",
+          "filters": "[]",
+          "height": 85.82,
+          "width": 336.80,
+          "x": 56.67,
+          "y": 35.62,
+          "z": 1.00
+        }
+      ],
       "width": 1280.00
     }
   ]
